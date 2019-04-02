@@ -11,10 +11,11 @@ Tracking fulfillment for some test projects
 
 ## Context 
 
-1. https://dialogflow.com/docs/contexts/contexts-fulfillment
-    * Get - basic example
-    * Set - basic example
-    * Clear - two examples
+1. Get, Set, Clear Context
+https://dialogflow.com/docs/contexts/contexts-fulfillment
 
-2. https://dialogflow.com/docs/reference/fulfillment-library/webhook-client
-    * Set - more complicated example
+2. Another example of Set 
+https://dialogflow.com/docs/reference/fulfillment-library/webhook-client
+
+3.  CRUD Context
+https://cloud.google.com/dialogflow-enterprise/docs/reference/rest/v2/projects.agent.sessions.contexts
