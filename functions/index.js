@@ -94,16 +94,16 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     // Convert temperature
     let convertedTemp, convertedUnit, temperatureHistoryText, temperatureHistoryImage;
     if (secondUnit === `Kelvin`) {
-      convertedTemp = originalTemp === 'Celsius' ? originalTemp + 273.15 : (originalTemp-32)*(5/9) + 273.15;
-      convertedUnit = `Kelvin`;
-      temperatureHistoryText = 'Here is a picture of the namesake of the Rankine unit, William John Macquorn Rankine:';
-      temperatureHistoryImage = new Image(wikipediaKelvinImageUrl);
-    } else if (secondUnit === `Rankine`) {
-      convertedTemp = originalTemp === 'Fahrenheit' ? originalTemp + 459.67 : originalTemp*(9/5) + 32 + 459.67; 
-      convertedUnit = `Rankine`;
-      temperatureHistoryText = 'Here is a picture of the namesake of the Kelvin unit, Lord Kelvin:';
-      temperatureHistoryImage = new Image(wikipediaRankineImageUrl);
-    }
+        convertedTemp = originalTemp === 'Celsius' ? originalTemp + 273.15 : (originalTemp-32)*(5/9) + 273.15;
+        convertedUnit = `Kelvin`;
+        temperatureHistoryText = 'Here is a picture of the namesake of the Kelvin unit, Lord Kelvin:';
+        temperatureHistoryImage = new Image(wikipediaKelvinImageUrl);
+      } else if (secondUnit === `Rankine`) {
+        convertedTemp = originalTemp === 'Fahrenheit' ? originalTemp + 459.67 : originalTemp*(9/5) + 32 + 459.67; 
+        convertedUnit = `Rankine`;
+         temperatureHistoryText = 'Here is a picture of the namesake of the Rankine unit, William John Macquorn Rankine:';
+        temperatureHistoryImage = new Image(wikipediaRankineImageUrl);
+      }
 
     // Set `temperature` context lifetime to zero
     // to reset the conversational state and parameters
